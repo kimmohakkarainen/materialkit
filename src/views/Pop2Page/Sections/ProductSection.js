@@ -204,13 +204,12 @@ const {
                 </ListItem>
               </List>
             }
-
-
-         /> <div className={classes.title}>
+			/> 
+   <div className={classes.title}>
             <h2>Yhteenveto</h2>
 			</div>
 		  </div>
-		  
+	
 					<Card> 
 					<CardHeader>
 					<b>

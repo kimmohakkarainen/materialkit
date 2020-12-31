@@ -4,43 +4,36 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-
-// core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-import Popover from "@material-ui/core/Popover";
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
-// Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import styles from "./styles.js";
+
+import Footer from "components/Footer/Footer.js";
 import Erottelu from "./koe.js";
 import Palkki from "./palkki.js";
+import Yhteenveto from "./Yhteenveto.js";
+import Ilmaisu from "./ilmaisu.js";
+import Äly from "./aly.js";
+import Nouto from "./nouto.js";
+import Kontakti from "./kontakti.js";
+import Sosiaalistaminen from "./sosiaalistaminen.js";
+import Yksinolo from "./yksinolo.js";
+
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
-export default function Pop2Page(props) {
+export default function Pop3Page(props) {
   const classes = useStyles();
-  const { ...rest } = props;
-  const [anchorElLeft, setAnchorElLeft] = React.useState(null);
-  const [anchorElTop, setAnchorElTop] = React.useState(null);
-  const [anchorElBottom, setAnchorElBottom] = React.useState(null);
-  const [anchorElRight, setAnchorElRight] = React.useState(null);
-  const [classicModal, setClassicModal] = React.useState(false);
   
-    console.log(classes);
-  return (
+  console.log(classes);
+  
+ return (
   <div>
       <Header
         color="transparent"
@@ -66,16 +59,21 @@ export default function Pop2Page(props) {
 		</div>
 		</Parallax>
 		
-		      <div className={classNames(classes.main, classes.mainRaised)}>
+		<div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
 		<Palkki/>
 		<Erottelu/>
-          <TeamSection />
-          <WorkSection />
+		<Ilmaisu/>
+		<Äly/>
+		<Nouto/>
+		<Kontakti/>
+		<Sosiaalistaminen/>
+		<Yksinolo/>
+		<Yhteenveto/>
+	
         </div>
       </div>
       <Footer />
     </div>
-	
 	  );
-	}
+}
